@@ -8,10 +8,8 @@ class CustomerHistoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: const Text('Customer History')),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [Text(customerHistory.toString())],
+        body: Center(
+          child: Text(customerHistory.toString()),
         ));
   }
 }

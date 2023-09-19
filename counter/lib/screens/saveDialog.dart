@@ -8,19 +8,26 @@ class SaveDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.greenAccent,
       onPressed: () => showDialog<String>(
         context: context,
         builder: (BuildContext context) => AlertDialog(
           title: const Text('Do you want to save?'),
           content: const Text(
-              'Do you want to save the current number of customer as the final number for today?'),
+              'Do you want to save the current number of customer as the final number for today? '),
           actions: <Widget>[
             TextButton(
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.red,
+              ),
               onPressed: () => Navigator.pop(context, 'Cancel'),
               child: const Text('Cancel'),
             ),
             TextButton(
+              style: TextButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.greenAccent[400]),
               onPressed: () {
                 saveCustomerHistory(DateTime.now().toLocal());
                 Navigator.pop(context, 'Save');
@@ -30,7 +37,7 @@ class SaveDialog extends StatelessWidget {
           ],
         ),
       ),
-      child: const Icon(Icons.save_outlined),
+      child: const Icon(Icons.save),
     );
   }
 }

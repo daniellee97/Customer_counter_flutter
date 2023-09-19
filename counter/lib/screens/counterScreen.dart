@@ -28,7 +28,6 @@ class _CounterScreenState extends State<CounterScreen> {
       _customerHistory = {..._customerHistory, time: _counter};
       _resetCounter();
     });
-    print(_customerHistory);
   }
 
   void _resetCounter() {
@@ -43,6 +42,7 @@ class _CounterScreenState extends State<CounterScreen> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
+      backgroundColor: Colors.black,
       body: GestureDetector(
         behavior: HitTestBehavior.opaque,
         onTap: _incrementCounter,
@@ -50,15 +50,32 @@ class _CounterScreenState extends State<CounterScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(
-                'Customers on ${date.year}.${date.month}.${date.day}:',
+              Container(
+                margin: const EdgeInsets.only(bottom: 70),
+                child: Text(
+                  'Customers on ${date.year}.${date.month}.${date.day}:',
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 25,
+                  ),
+                ),
               ),
-              Text(
-                '$_counter',
-                style: Theme.of(context).textTheme.headlineMedium,
+              Container(
+                margin: const EdgeInsets.only(bottom: 70),
+                child: Text(
+                  '$_counter',
+                  style: const TextStyle(color: Colors.white, fontSize: 40),
+                ),
               ),
               TextButton(
-                child: const Text('Customer History'),
+                style: TextButton.styleFrom(
+                  foregroundColor: Colors.black,
+                  backgroundColor: Colors.amber,
+                ),
+                child: const Text(
+                  'Customer Histories',
+                  style: TextStyle(fontSize: 18),
+                ),
                 onPressed: () => Navigator.push(
                     context,
                     MaterialPageRoute(
