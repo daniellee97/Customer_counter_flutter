@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'counterScreen.dart';
+import 'screens/counterScreen.dart';
 
 void main() {
   runApp(const MyApp());
