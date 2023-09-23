@@ -71,9 +71,9 @@ class _CounterScreenState extends State<CounterScreen> {
               ),
               TextButton(
                 style: TextButton.styleFrom(
-                  foregroundColor: Colors.black,
-                  backgroundColor: Colors.amber,
-                ),
+                    foregroundColor: Colors.black,
+                    backgroundColor: Colors.amber,
+                    padding: const EdgeInsets.all(20)),
                 child: const Text(
                   'Customer Histories',
                   style: TextStyle(fontSize: 18),
