@@ -11,7 +11,7 @@ class CustomerHistoryScreen extends StatelessWidget {
         appBar: AppBar(title: const Text('Customer History')),
         body: Center(
           // child: Text(customerHistory.toString()),
-          child: Column(children: [
+          child: ListView(children: [
             for (var entry in customerHistory.entries) ...[
               ListTile(
                 title: Text(entry.key.toString()),

@@ -66,7 +66,10 @@ class _CounterScreenState extends State<CounterScreen> {
                 margin: const EdgeInsets.only(bottom: 70),
                 child: Text(
                   '$_counter',
-                  style: const TextStyle(color: Colors.white, fontSize: 40),
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 40,
+                  ),
                 ),
               ),
               TextButton(
